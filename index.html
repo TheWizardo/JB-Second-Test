@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <form>
+        <h1>Country Search</h1>
+        <button type="button" onclick="loadData(true)">All</button>
+        <!-- ensures only letters can be accepted -->
+        <input onkeydown="return /[a-z]/i.test(event.key)" type="text" id="country-name">
+        <button type="button" onclick="loadData(false)">Search</button>
+    </form>
+    <div id="container">
+        <br>
+        <label>Total countries result: <span id="total-results"></span></label>
+        <br>
+        <label>Total Countries Population: <span id="total-population"></span></label>
+        <br>
+        <label>Average Population: <span id="avg-population"></span></label>
+        <br>
+        <br>
+        <table id="countires">
+        </table>
+        <br>
+        <table id="regions">
+        </table>
+        <br>
+        <table id="currencies">
+        </table>
+    </div>
+</body>
+
+</html>
