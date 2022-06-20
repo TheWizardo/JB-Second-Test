@@ -11,12 +11,12 @@
 </head>
 
 <body>
-    <form>
+    <form id="myForm">
         <h1>Country Search</h1>
         <button type="button" onclick="loadData(true)">All</button>
         <!-- ensures only letters can be accepted -->
         <input onkeydown="return /[a-z]/i.test(event.key)" type="text" id="country-name">
-        <button type="button" onclick="loadData(false)">Search</button>
+        <button onclick="loadData(false)">Search</button>
     </form>
     <div id="container">
         <br>

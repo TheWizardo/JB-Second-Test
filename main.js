@@ -1,3 +1,10 @@
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        // preventing the page from refreshing after submit.
+        document.getElementById("myForm").addEventListener('submit', () => event.preventDefault());
+    });
+})();
+
 async function getInfo(url) {
     // fetching the data
     let raw_res = await fetch(url);
@@ -5,10 +12,10 @@ async function getInfo(url) {
     return await raw_res.json();
 }
 
-function addRow(table, ...values){
+function addRow(table, ...values) {
     // creating a row to house all values
     const row = document.createElement("tr");
-    for (val of values){
+    for (val of values) {
         // creating the cell
         const cell = document.createElement("td");
         cell.innerText = val;
